@@ -12,18 +12,17 @@ public class WordCount {
 
     public static void main(String[] args) {
         
-        // current directory
+        // Path to the current working directory
     	String currentDirectory = System.getProperty("user.dir");
 
-    	// get the package name
+    	// Get the package name[its path to be used]
         String packageName = WordCount.class.getPackageName().replace('.', '/');    	
     	
-        // words.txt file
+        // file name 
         String fileName = "words.txt";
         
-        // final path to the word.txt file
+        // Path to the final text file 
         String filePath = currentDirectory + "/src/" + packageName + "/" + fileName;
-        System.out.println("The path which it expects the file to be: " + filePath);
 
         try {
             Map<String, Integer> wordFrequencyMap = countWordFrequency(filePath);
